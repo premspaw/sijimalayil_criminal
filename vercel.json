@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/sijimalayil_criminal.html"
+    }
+  ]
+}
