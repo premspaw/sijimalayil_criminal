@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | Siji Malayil Associates – Criminal Defence Specialists</title>
+  <meta name="description" content="Join Siji Malayil Associates. We are seeking Junior Associates, Legal Interns, and Support Staff for our criminal law practice in Bangalore.">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0d0d0d; --ink2: #1a1a1a; --ink3: #242424;
+      --red: #c0392b; --red2: #e04535; --red-pale: #fdf2f1;
+      --gold: #b5851a; --gold2: #d4a020; --white: #ffffff;
+      --off: #f9f8f6; --off2: #f3f1ed; --text: #1a1a1a;
+      --muted: #666; --border: #e4e1da;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --r: 4px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+    body { font-family: var(--sans); color: var(--text); background: var(--white); overflow-x: hidden; padding-top: 68px; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 5vw; }
+    .tag { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; color: var(--red); display: inline-block; margin-bottom: 1rem; }
+    h2 { font-family: var(--serif); font-size: clamp(1.9rem, 3.2vw, 2.8rem); font-weight: 400; color: var(--ink); line-height: 1.18; }
+    h2 em { font-style: italic; }
+    .rule { display: block; width: 40px; height: 2px; margin: 1.4rem 0 1.8rem; background: var(--red); }
+    .body-text { font-size: 0.95rem; color: var(--muted); line-height: 1.85; font-weight: 300; }
+    .btn { display: inline-block; text-decoration: none; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; border-radius: var(--r); transition: all 0.22s; cursor: pointer; border: none; padding: 0.88rem 2rem; }
+    .btn-red { background: var(--red); color: var(--white); }
+    .btn-red:hover { background: var(--red2); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+    .btn-outline:hover { background: var(--ink); color: var(--white); }
+
+    /* NAV */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(13, 13, 13, 0.98); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.07); transition: background 0.3s ease, box-shadow 0.3s ease; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    header .wrap { max-width: 100% !important; padding: 0 1.5rem !important; }
+    .logo { text-decoration: none; }
+    .logo-name { font-family: var(--serif); font-size: 1.1rem; color: var(--white); }
+    .logo-tag { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255, 255, 255, 0.35); margin-top: 3px; display: block; }
+    .nav-links { display: flex; list-style: none; gap: 0.2rem; margin-left: auto; }
+    .nav-links a { padding: 0.35rem 0.65rem; font-size: 0.78rem; color: rgba(255, 255, 255, 0.55); text-decoration: none; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-emergency { background: var(--red); color: var(--white); padding: 0.5rem 1.1rem; font-size: 0.7rem; font-weight: 600; border-radius: var(--r); text-decoration: none; }
+
+    /* PRACTICE CARDS */
+    .practice-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .practice-card { background: var(--off); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border); transition: all 0.3s; }
+    .practice-card:hover { transform: translateY(-5px); border-color: var(--red); }
+    .practice-card-num { font-family: var(--serif); font-size: 0.8rem; color: var(--gold); margin-bottom: 1rem; }
+    .practice-card-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+    .practice-card h3 { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 1rem; }
+    .practice-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+    /* MODAL */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(13, 13, 13, 0.85); backdrop-filter: blur(8px); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 2rem; opacity: 0; transition: opacity 0.3s; }
+    .modal-overlay.on { display: flex; opacity: 1; }
+    .modal-card { background: var(--white); width: 100%; max-width: 500px; border-radius: 12px; padding: 2.5rem; position: relative; transform: translateY(20px); transition: transform 0.3s; }
+    .modal-overlay.on .modal-card { transform: translateY(0); }
+    .modal-close { position: absolute; top: 1.2rem; right: 1.2rem; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; cursor: pointer; color: var(--muted); border: 1px solid var(--border); border-radius: 50%; }
+    .file-wrapper { border: 1.5px dashed var(--border); padding: 1.5rem; border-radius: var(--r); text-align: center; position: relative; }
+    .file-input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+    .file-name-display { font-size: 0.75rem; color: var(--red); font-weight: 600; margin-top: 5px; display: none; }
+    
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    
+    footer { background: var(--ink); padding: 5rem 0; color: var(--white); margin-top: 6rem; }
+    .ft { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 4rem; }
+    .f-brand { font-family: var(--serif); font-size: 1.4rem; display: block; margin-bottom: 0.5rem; }
+    .f-brand-sub { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    .f-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 1.2rem; line-height: 1.7; }
+    .fc-title { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: var(--white); }
+    .fl-list { list-style: none; }
+    .fl-list li { margin-bottom: 0.8rem; }
+    .fl-list a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .fl-list a:hover { color: var(--white); }
+
+    .fg { margin-bottom: 1.2rem; }
+    .fl { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 0.4rem; color: var(--muted); }
+    .fc { width: 100%; padding: 0.8rem 1rem; border: 1.5px solid var(--border); border-radius: var(--r); font-family: var(--sans); font-size: 0.88rem; }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .f-submit { width: 100%; background: var(--red); color: var(--white); border: none; padding: 1rem; font-weight: 600; border-radius: var(--r); cursor: pointer; transition: all 0.2s; }
+    
+    @media(max-width:768px) {
+      .ft { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 2px 2px 25px rgba(37, 211, 102, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <header id="hdr">
+    <div class="wrap">
+      <nav class="nav-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-name">Siji Malayil Associates</span>
+          <span class="logo-tag">Advocates &amp; Legal Consultants</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#practice">All Practice Areas</a></li>
+          <li><a href="team.html" target="_blank">Our Team</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="careers" style="padding: 3rem 0 6rem 0;">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="tag">Join Our Team</span>
+        <h2>Building the Future of<br><em>Criminal Defence</em></h2>
+        <span class="rule"></span>
+        <p class="body-text" style="max-width: 700px; margin-bottom: 3.5rem;">At Siji Malayil Associates, we believe in excellence, integrity, and deep commitment to our clients' rights. We are always looking for passionate legal professionals to join our dedicated criminal law team in Bangalore.</p>
+      </div>
+
+      <div class="practice-row reveal">
+        <div class="practice-card">
+          <div class="practice-card-num">01</div>
+          <div class="practice-card-icon" style="background:var(--red-pale); color:var(--red); font-size: 1.5rem;">💼</div>
+          <h3>Junior Associate</h3>
+          <p>Seeking advocates with 1-3 years of experience in criminal litigation. Must have a strong research background and a passion for courtroom advocacy.</p>
+          <button class="btn btn-outline" style="margin-top: 1.5rem; padding: 0.6rem 1.2rem; width: 100%;" onclick="openCareerModal('Junior Associate')">Apply Now</button>
+        </div>
+        <div class="practice-card">
+          <div class="practice-card-num">02</div>
+          <div class="practice-card-icon" style="background:var(--off); color:var(--gold); font-size: 1.5rem;">⚖️</div>
+          <h3>Legal Interns</h3>
+          <p>Monthly internship opportunities for 4th and 5th-year law students. Get hands-on experience in bail applications and trial preparation.</p>
+          <button class="btn btn-outline" style="margin-top: 1.5rem; padding: 0.6rem 1.2rem; width: 100%;" onclick="openCareerModal('Legal Intern')">Apply for Internship</button>
+        </div>
+        <div class="practice-card">
+          <div class="practice-card-num">03</div>
+          <div class="practice-card-icon" style="background:var(--red-pale); color:var(--red); font-size: 1.5rem;">📋</div>
+          <h3>Support Staff</h3>
+          <p>Openings for legal clerks and stenographers with experience in legal documentation and court procedures.</p>
+          <button class="btn btn-outline" style="margin-top: 1.5rem; padding: 0.6rem 1.2rem; width: 100%;" onclick="openCareerModal('Support Staff')">Apply Now</button>
+        </div>
+        <div class="practice-card" style="background: var(--ink); color: var(--white);">
+          <div class="practice-card-num" style="color:rgba(255,255,255,0.35);">Apply Now</div>
+          <div class="practice-card-icon" style="background:rgba(192, 57, 43, 0.2); color:var(--white); font-size: 1.5rem;">✉️</div>
+          <h3 style="color:var(--white);">General Application</h3>
+          <p style="color:rgba(255,255,255,0.55); margin-bottom: 1.2rem;">Don't see a specific role? Send us your CV for future opportunities.</p>
+          <button class="btn btn-red" style="width: 100%;" onclick="openCareerModal('General Application')">Upload CV</button>
+        </div>
+      </div>
+      
+      <div style="margin-top: 4rem; text-align: center;">
+          <a href="index.html" class="btn btn-outline">← Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="ft">
+        <div>
+          <span class="f-brand">Siji Malayil Associates</span>
+          <span class="f-brand-sub">Criminal Defence Lawyers</span>
+        </div>
+        <div>
+          <div class="fc-title">Quick Links</div>
+          <ul class="fl-list">
+            <li><a href="index.html#criminal">Criminal Law</a></li>
+            <li><a href="team.html" target="_blank">Our Team</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fc-title">Office</div>
+          <p class="f-desc" style="margin-top:0;">Manipal Centre, MG Road<br>Bangalore, Karnataka – 560 042</p>
+        </div>
+        <div>
+          <div class="fc-title">Contact</div>
+          <ul class="fl-list">
+            <li><a href="tel:+919844104360">+91 984 410 4360</a></li>
+            <li><a href="mailto:contact@sijimalayil.com">contact@sijimalayil.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); obs.unobserve(x.target) } }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+
+    function openCareerModal(role) {
+      document.getElementById('careerRole').value = role;
+      document.getElementById('modalTitle').textContent = 'Apply for ' + role;
+      const m = document.getElementById('careerModal');
+      m.style.display = 'flex';
+      setTimeout(() => m.classList.add('on'), 10);
+    }
+    function closeCareerModal() {
+      const m = document.getElementById('careerModal');
+      m.classList.remove('on');
+      setTimeout(() => m.style.display = 'none', 300);
+    }
+    function updateFileName(input) {
+      const display = document.getElementById('fileName');
+      if (input.files.length > 0) { display.textContent = 'Selected: ' + input.files[0].name; display.style.display = 'block'; }
+    }
+    function submitCareer(e) {
+      e.preventDefault();
+      const b = document.getElementById('csub');
+      b.textContent = 'CV Uploaded Successfully ✓';
+      b.style.background = '#1a5c2a';
+      setTimeout(() => { closeCareerModal(); b.textContent = 'Submit Application'; b.style.background = ''; }, 2000);
+    }
+  </script>
+
+  <div class="modal-overlay" id="careerModal" onclick="if(event.target==this) closeCareerModal()">
+    <div class="modal-card">
+      <div class="modal-close" onclick="closeCareerModal()">&times;</div>
+      <h3 id="modalTitle" style="font-family:var(--serif); margin-bottom:1.5rem;">Apply Now</h3>
+      <form onsubmit="submitCareer(event)">
+        <input type="hidden" id="careerRole">
+        <div class="fg"><label class="fl">Full Name *</label><input type="text" class="fc" required></div>
+        <div class="f-row">
+          <div class="fg"><label class="fl">Phone *</label><input type="tel" class="fc" required></div>
+          <div class="fg"><label class="fl">Email *</label><input type="email" class="fc" required></div>
+        </div>
+        <div class="fg">
+          <label class="fl">Upload CV *</label>
+          <div class="file-wrapper">
+            <input type="file" class="file-input" onchange="updateFileName(this)" required>
+            <span class="file-label">Click to upload CV</span>
+            <div id="fileName" class="file-name-display"></div>
+          </div>
+        </div>
+        <button type="submit" class="f-submit" id="csub">Submit Application</button>
+      </form>
+    </div>
+  </div>
+  <a href="https://wa.me/919844104360" class="wa-float" target="_blank" title="Chat with us on WhatsApp">
+    <svg viewBox="0 0 448 512" style="width:30px;height:30px;fill:white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.3-8.6-44.4-27.5-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.8-5.7 5.7-9.4 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+</body>
+</html>

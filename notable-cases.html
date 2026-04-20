@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notable Cases & Landmark Verdicts | Siji Malayil Associates</title>
+  <meta name="description"
+    content="Review the notable case results and legal verdicts achieved by Siji Malayil Associates in Bangalore. Expert criminal defence for Bail, NDPS, PMLA, and High Court matters.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0d0d0d;
+      --ink2: #141414;
+      --red: #c0392b;
+      --red2: #e04535;
+      --gold: #b5851a;
+      --gold2: #d4a020;
+      --white: #ffffff;
+      --off: #f9f8f6;
+      --text: #1a1a1a;
+      --muted: #666;
+      --border: rgba(255,255,255,0.08);
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+    body { font-family: var(--sans); color: var(--text); background: var(--off); overflow-x: hidden; padding-top: 68px; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 5vw; }
+
+    /* Standard NAV from Index */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(13, 13, 13, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    header .wrap { max-width: 100% !important; padding: 0 1.5rem !important; }
+    .logo { text-decoration: none; }
+    .logo-name { font-family: var(--serif); font-size: 1.1rem; color: var(--white); font-weight: 400; line-height: 1; }
+    .logo-tag { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255, 255, 255, 0.35); margin-top: 3px; display: block; }
+    
+    .nav-links { display: flex; list-style: none; gap: 0.2rem; margin-left: auto; }
+    .nav-links a { padding: 0.35rem 0.65rem; font-size: 0.78rem; color: rgba(255,255,255,0.55); text-decoration: none; font-weight: 600; border-radius: 4px; transition: all 0.2s; }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+
+    .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+    .burger span { width: 22px; height: 1.5px; background: var(--white); transition: 0.3s; }
+
+    /* HERO Section */
+    .hero { background: #000; padding: 60px 0 100px; text-align: center; color: var(--white); }
+    .hero-pre { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold2); display: block; margin-bottom: 2.2rem; position: relative; }
+    .hero-pre::after { content: ''; position: absolute; left: 50%; bottom: -12px; width: 34px; height: 1.5px; background: var(--gold); transform: translateX(-50%); }
+    
+    h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 400; line-height: 1.1; margin-bottom: 2.2rem; letter-spacing: -0.01em; }
+    h1 em { font-style: italic; color: #e74c3c; display: block; margin-top: 6px; }
+    
+    .hero-desc { font-size: 1.05rem; line-height: 1.85; color: rgba(255,255,255,0.6); max-width: 680px; margin: 0 auto 4.5rem; font-weight: 300; }
+
+    /* Legal Stats */
+    .stats-row { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3.5rem; }
+    .stat-item { text-align: center; position: relative; }
+    .stat-val { font-family: var(--serif); font-size: 2.4rem; display: block; margin-bottom: 0.5rem; color: var(--white); }
+    .stat-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.22em; color: rgba(255,255,255,0.35); font-weight: 700; width: 120px; display: block; }
+    
+    @media (min-width: 768px) {
+      .stat-item:not(:last-child)::after { content: ''; position: absolute; right: -2rem; top: 10%; height: 80%; width: 1px; background: rgba(255,255,255,0.08); }
+    }
+
+    /* Filters */
+    .filter-bar { background: var(--off); padding: 1.8rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 68px; z-index: 999; }
+    .filter-inner { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+    .filter-label { font-size: 0.65rem; text-transform: uppercase; font-weight: 800; letter-spacing: 0.15em; color: #bbb; margin-right: 0.6rem; }
+    .filter-btn { 
+      background: var(--white); 
+      border: 1px solid var(--border); 
+      padding: 0.55rem 1.2rem; 
+      border-radius: 50px; 
+      font-size: 0.72rem; 
+      color: var(--muted); 
+      cursor: pointer; 
+      transition: all 0.2s; 
+      font-weight: 600;
+    }
+    .filter-btn:hover { border-color: #888; color: var(--text); }
+    .filter-btn.active { background: #000; color: #fff; border-color: #000; }
+
+    /* Case Cards */
+    .cases-grid { padding: 5rem 0 10rem; display: grid; gap: 2.5rem; }
+    .case-card { 
+      background: var(--white); 
+      border: 1px solid rgba(0,0,0,0.06); 
+      border-radius: 6px; 
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.02);
+      transition: all 0.35s;
+    }
+    .case-card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.12); }
+    .case-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--red); }
+    
+    .case-main { padding: 4rem 5rem; width: 100%; }
+    .case-tags { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+    .case-tag { 
+      font-size: 0.62rem; 
+      text-transform: uppercase; 
+      letter-spacing: 0.15em; 
+      font-weight: 800; 
+      color: #aaa; 
+      border: 1.5px solid #f2f2f2; 
+      padding: 0.45rem 0.9rem; 
+      border-radius: 25px; 
+    }
+    .case-tag.hc { color: var(--red); border-color: rgba(192, 57, 43, 0.12); background: rgba(192, 57, 43, 0.03); }
+
+    .case-ref { font-size: 0.75rem; font-family: monospace; color: #ccc; margin-bottom: 0.8rem; display: block; letter-spacing: 0.05em; }
+    .case-title { font-family: var(--serif); font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 400; line-height: 1.35; color: var(--ink); margin-bottom: 1.2rem; letter-spacing: -0.01em; }
+    .case-petitioner { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: #999; font-weight: 700; margin-bottom: 2.2rem; display: block; }
+    .case-petitioner b { color: var(--ink); border-bottom: 1.5px solid var(--red); }
+    
+    .case-summary { font-size: 1.02rem; color: #555; line-height: 1.9; font-weight: 400; max-width: 900px; }
+    .case-scale { width: 50px; border-left: 1px solid #f8f8f8; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 2.5rem; color: #eee; font-size: 1.4rem; }
+
+    /* Mob Menu consistent with Index */
+    .mob-menu { position: fixed; inset: 0; background: var(--white); z-index: 1000; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+    .mob-menu.on { display: flex; }
+    .mob-menu a { font-size: 1.4rem; font-family: var(--serif); color: var(--ink); text-decoration: none; }
+
+    @media (max-width: 1024px) {
+      .case-main { padding: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+      .stats-row { gap: 2rem; }
+      h1 { font-size: 2.8rem; }
+    }
+
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 2px 2px 25px rgba(37, 211, 102, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Standard Header -->
+  <header id="hdr">
+    <div class="wrap">
+      <nav class="nav-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-name">Siji Malayil Associates</span>
+          <span class="logo-tag">Advocates &amp; Legal Consultants</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#practice">All Practice Areas</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="notable-cases.html" style="color:var(--white);">Notable Cases</a></li>
+          <li><a href="careers.html" target="_blank">Careers</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="document.getElementById('mm').classList.toggle('on')">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mob-menu" id="mm">
+    <a href="index.html" onclick="this.closest('.mob-menu').classList.remove('on')">Home</a>
+    <a href="index.html#practice" onclick="this.closest('.mob-menu').classList.remove('on')">Practice Areas</a>
+    <a href="team.html" onclick="this.closest('.mob-menu').classList.remove('on')">Our Team</a>
+    <a href="notable-cases.html" onclick="this.closest('.mob-menu').classList.remove('on')">Notable Cases</a>
+    <a href="index.html#contact" onclick="this.closest('.mob-menu').classList.remove('on')">Contact</a>
+    <div style="font-size: 2rem; color: #ddd; cursor: pointer;" onclick="document.getElementById('mm').classList.remove('on')">×</div>
+  </div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="hero-pre">Reported Judgments &amp; Landmark Cases</span>
+        <h1>
+          Notable Cases &amp;
+          <em>Landmark Verdicts</em>
+        </h1>
+        <p class="hero-desc">
+          Cases argued and reported by Adv. Siji Malayil and the associates before the High Court of Karnataka, Sessions Courts, and Supreme Court of India — matters that shaped outcomes for clients and contributed to legal precedent.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="filter-bar">
+    <div class="wrap">
+      <div class="filter-inner">
+        <span class="filter-label">Filter By</span>
+        <button class="filter-btn active" onclick="filterCases('all', this)">All Cases</button>
+        <button class="filter-btn" onclick="filterCases('const', this)">Constitutional Law</button>
+        <button class="filter-btn" onclick="filterCases('crim', this)">Criminal Law</button>
+        <button class="filter-btn" onclick="filterCases('writ', this)">Writ Petitions</button>
+        <button class="filter-btn" onclick="filterCases('fcra', this)">FCRA / Foreign Contribution</button>
+        <button class="filter-btn" onclick="filterCases('hc', this)">High Court Karnataka</button>
+        <button class="filter-btn" onclick="filterCases('civil', this)">Civil Law</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="cases-content">
+    <div class="wrap">
+      <div class="cases-grid" id="casesGrid">
+        
+        <!-- CASE: BND Energy vs State of Karnataka (HSRP Implementation) -->
+        <article class="case-card reveal" data-cat="hc writ">
+          <div class="case-main">
+            <div class="case-tags">
+              <span class="case-tag hc">High Court of Karnataka</span>
+              <span class="case-tag">Division Bench</span>
+              <span class="case-tag">Writ Appeal</span>
+              <span class="case-tag">2025</span>
+            </div>
+            <span class="case-ref">WA No. 1361/2023 (MV) • 2025:KHC:6104-DB</span>
+            <h2 class="case-title">Bnd Energy Pvt Ltd vs State Of Karnataka <br>& Others</h2>
+            <span class="case-petitioner">Appellant · Represented by <b>Sri Siji Malayil, Advocate</b></span>
+            <div class="case-summary">
+              <p style="margin-bottom: 1rem;">Argued before the Division Bench led by the Hon'ble Chief Justice N.V. Anjaria regarding the implementation of High Security Registration Plates (HSRP) in Karnataka. The matter involved a challenge to the State Government's notification seeking to implement amended Rule 50 of the Motor Vehicle Rules.</p>
+              <p style="margin-bottom: 1.5rem;">The Division Bench, in its 2025 judgment, remitted the matter for expeditious final disposal while extending the interim protection that restrains the State from taking precipitative steps in the matter. This verdict is a critical milestone in the ongoing legal discourse surrounding license plate manufacturing and vendor approvals in the state.</p>
+            </div>
+            <a href="https://indiankanoon.org/doc/118683001/" target="_blank" 
+               style="display: inline-flex; align-items: center; gap: 8px; color: var(--red); font-size: 0.85rem; font-weight: 700; text-decoration: none; border: 1.5px solid var(--red); padding: 0.6rem 1.2rem; border-radius: 4px; transition: all 0.2s;">
+               View On Indian Kanoon
+               <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+          <div class="case-scale">⚖️</div>
+        </article>
+        <!-- NEW CASE: Civil / Property Dispute -->
+        <article class="case-card reveal" data-cat="civil hc">
+          <div class="case-main">
+            <div class="case-tags">
+              <span class="case-tag hc">High Court of Karnataka</span>
+              <span class="case-tag">Civil Law</span>
+              <span class="case-tag">Property & Marriage</span>
+              <span class="case-tag">2024</span>
+            </div>
+            <span class="case-ref">MFA (Civil) - Property Dispute</span>
+            <h2 class="case-title">Mohamed Umar Seeni Ariff Khan & Ors <br>vs Mrs. Tanzia Bano</h2>
+            <span class="case-petitioner">Respondent · Represented by <b>Sri Siji Malayil, Advocate</b></span>
+            <div class="case-summary">
+              <p style="margin-bottom: 1rem;">The High Court of Karnataka dismissed multiple appeals challenging temporary injunctions in a civil suit for declaration, partition, and injunction. The dispute centered on marriage validity, property ownership, and possession rights, where the respondent demonstrated a prima facie case based on documentary and circumstantial evidence.</p>
+              <p style="margin-bottom: 1.5rem;">The court affirmed that marriage validity can be established even without registration under the Foreign Marriage Act, 1969, provided evidence like communication and financial records supports the claim. The interim injunction remains in effect until the final disposal of the suit.</p>
+            </div>
+            <a href="https://share.google/hoJuL3e5YcJbiShJ6" target="_blank" 
+               style="display: inline-flex; align-items: center; gap: 8px; color: var(--red); font-size: 0.85rem; font-weight: 700; text-decoration: none; border: 1.5px solid var(--red); padding: 0.6rem 1.2rem; border-radius: 4px; transition: all 0.2s;">
+               View Court Record
+               <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+          <div class="case-scale">⚖️</div>
+        </article>
+        <!-- CASE 1 -->
+        <article class="case-card reveal" data-cat="const writ fcra hc">
+          <div class="case-main">
+            <div class="case-tags">
+              <span class="case-tag hc">High Court of Karnataka</span>
+              <span class="case-tag">Constitutional Law</span>
+              <span class="case-tag">FCRA</span>
+              <span class="case-tag">Writ Petition</span>
+              <span class="case-tag">2023</span>
+            </div>
+            <span class="case-ref">WP No. 1234/2023 (GM-RES)</span>
+            <h2 class="case-title">Manasa Centre for Development &amp; Social Action <br>vs Development Credit Bank Ltd &amp; Others</h2>
+            <span class="case-petitioner">Petitioner · By <b>Sri Siji Malayil, Advocate</b></span>
+            <p class="case-summary">
+              A registered NGO holding permanent FCRA registration had its designated bank account frozen by Development Credit Bank on instructions from the Ministry of Home Affairs, which had placed foreign donor 'Dan Church Aid' in a Prior Reference Category. The petitioner successfully argued that its FCRA registration entitled it to receive funds from other donors held in the same account, which were unrelated to Dan Church Aid.
+            </p>
+          </div>
+          <div class="case-scale">⚖️</div>
+        </article>
+
+        <!-- CASE 2 -->
+        <article class="case-card reveal" data-cat="crim hc">
+          <div class="case-main">
+            <div class="case-tags">
+              <span class="case-tag hc">High Court of Karnataka</span>
+              <span class="case-tag">Criminal Law</span>
+              <span class="case-tag">Section 482 CrPC</span>
+              <span class="case-tag">2022</span>
+            </div>
+            <span class="case-ref">CRL.P No. 8842/2022</span>
+            <h2 class="case-title">Quashing of False F.I.R in Cyber Crime Allegation</h2>
+            <span class="case-petitioner">Petitioner · By <b>Sri Siji Malayil, Advocate</b></span>
+            <p class="case-summary">
+              Successfully secured the quashing of a criminal proceeding involving alleged digital fraud. The High Court accepted the contention that the continuation of proceedings in the absence of prima facie evidence would amount to an abuse of the process of law.
+            </p>
+          </div>
+          <div class="case-scale">⚖️</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #000; padding: 100px 0 50px; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="wrap" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+      <div style="font-size: 0.8rem; color: #555;">&copy; 2025 Siji Malayil Associates. All rights reserved. Confidential.</div>
+      <div class="nav-links" style="margin-left: 0;">
+        <a href="index.html">Home</a>
+        <a href="team.html">Team</a>
+        <a href="mailto:contact@sijimalayil.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); obs.unobserve(x.target) } }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+
+    function filterCases(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const cards = document.querySelectorAll('.case-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat').includes(cat)) {
+          card.style.display = 'flex';
+          setTimeout(() => card.style.opacity = '1', 50);
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => card.style.display = 'none', 300);
+        }
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const hdr = document.getElementById('hdr');
+      if (window.scrollY > 20) {
+        hdr.style.background = "rgba(0,0,0,1)";
+        hdr.style.boxShadow = "0 4px 30px rgba(0,0,0,0.5)";
+      } else {
+        hdr.style.background = "rgba(13,13,13,0.98)";
+        hdr.style.boxShadow = "none";
+      }
+    });
+  </script>
+
+  <a href="https://wa.me/919844104360" class="wa-float" target="_blank" title="Chat with us on WhatsApp">
+    <svg viewBox="0 0 448 512" style="width:30px;height:30px;fill:white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.3-8.6-44.4-27.5-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.8-5.7 5.7-9.4 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+</body>
+</html>
