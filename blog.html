@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Blog | Siji Malayil Associates – Criminal & Civil Law Insights</title>
+  <meta name="description" content="Read the latest legal insights, case analyses, and updates on criminal and civil law from Siji Malayil Associates, Bangalore.">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0d0d0d; --ink2: #1a1a1a; --ink3: #242424;
+      --red: #c0392b; --red2: #e04535; --red-pale: #fdf2f1;
+      --gold: #b5851a; --gold2: #d4a020; --white: #ffffff;
+      --off: #f9f8f6; --off2: #f3f1ed; --text: #1a1a1a;
+      --muted: #666; --border: #e4e1da;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --r: 4px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+    body { font-family: var(--sans); color: var(--text); background: var(--white); overflow-x: hidden; padding-top: 68px; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 5vw; }
+    .tag { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; color: var(--red); display: inline-block; margin-bottom: 1rem; }
+    h1 { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: var(--ink); line-height: 1.2; }
+    .body-text { font-size: 0.95rem; color: var(--muted); line-height: 1.85; font-weight: 300; }
+    
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(13, 13, 13, 0.98); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.07); transition: background 0.3s ease, box-shadow 0.3s ease; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    header .wrap { max-width: 100% !important; padding: 0 1.5rem !important; }
+    .logo { text-decoration: none; }
+    .logo-name { font-family: var(--serif); font-size: 1.1rem; color: var(--white); }
+    .logo-tag { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255, 255, 255, 0.35); margin-top: 3px; display: block; }
+    .nav-links { display: flex; list-style: none; gap: 0.2rem; margin-left: auto; }
+    .nav-links a { padding: 0.35rem 0.65rem; font-size: 0.78rem; color: rgba(255, 255, 255, 0.55); text-decoration: none; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-emergency { background: var(--red); color: var(--white); padding: 0.5rem 1.1rem; font-size: 0.7rem; font-weight: 600; border-radius: var(--r); text-decoration: none; }
+
+    .hero-blog { background: var(--ink); padding: 6rem 0 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero-blog::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); opacity: 0.03; pointer-events: none; }
+    
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 3rem; padding: 5rem 0; }
+    .post-card { display: flex; flex-direction: column; text-decoration: none; group; cursor: pointer; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; }
+    .post-card:hover { transform: translateY(-5px); }
+    .post-img { width: 100%; aspect-ratio: 16/9; background: var(--off2); object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid var(--border); }
+    .post-date { font-size: 0.7rem; color: var(--red); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .post-excerpt { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-top: 0.8rem; }
+    
+    .wa-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 20px rgba(0,0,0,0.2); z-index: 10000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 2px 2px 25px rgba(37, 211, 102, 0.5); }
+
+    .loading-state { text-align: center; padding: 5rem; color: var(--muted); font-size: 1.2rem; font-family: var(--serif); }
+    
+    @media(max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="hdr">
+    <div class="wrap">
+      <nav class="nav-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-name">Siji Malayil Associates</span>
+          <span class="logo-tag">Advocates & Legal Consultants</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="notable-cases.html">Notable Cases</a></li>
+          <li><a href="blog.html" style="color:white; font-weight:600;">Blog</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-blog">
+    <div class="wrap">
+      <span class="tag" style="color:rgba(255,255,255,0.5);">Insights & Perspective</span>
+      <h1>Legal <em>Knowledge</em> Base</h1>
+      <p class="body-text" style="color:rgba(255,255,255,0.6); max-width:600px; margin: 0 auto;">Expert commentary on the evolving legal landscape in India, shared by our senior advocates and associates.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div id="blog-container" class="blog-grid">
+      <div class="loading-state">Loading latest legal insights...</div>
+    </div>
+  </div>
+
+  <script>
+    // Configuration
+    const repo = 'premspaw/sijimalayil_criminal';
+    const folder = 'content/blog';
+
+    async function loadBlogs() {
+      const container = document.getElementById('blog-container');
+      try {
+        // Fetch list of files from GitHub
+        const response = await fetch(`https://api.github.com/repos/${repo}/contents/${folder}`);
+        if (!response.ok) throw new Error('Could not fetch blog list');
+        
+        const files = await response.json();
+        const blogFiles = files.filter(f => f.name.endsWith('.json'));
+        
+        if (blogFiles.length === 0) {
+          container.innerHTML = '<div class="loading-state">No blog posts found. Check back soon!</div>';
+          return;
+        }
+
+        container.innerHTML = ''; // Clear loading
+
+        // Fetch each blog post's content
+        for (const file of blogFiles) {
+          const postRes = await fetch(file.download_url);
+          const post = await postRes.json();
+          
+          const date = new Date(post.date).toLocaleDateString('en-IN', {
+            day: 'numeric', month: 'long', year: 'numeric'
+          });
+
+          const card = document.createElement('a');
+          card.href = `post.html?id=${file.name}`;
+          card.className = 'post-card';
+          card.innerHTML = `
+            ${post.image ? `<img src="${post.image}" class="post-img" alt="${post.title}">` : '<div class="post-img" style="display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(0,0,0,0.05)">⚖️</div>'}
+            <div class="post-date">${date}</div>
+            <h2>${post.title}</h2>
+            <p class="post-excerpt">${post.excerpt || post.body.substring(0, 120) + '...'}</p>
+          `;
+          container.appendChild(card);
+        }
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = '<div class="loading-state">Unable to load blog posts. Please refresh.</div>';
+      }
+    }
+
+    loadBlogs();
+  </script>
+
+  <a href="https://wa.me/919844104360" class="wa-float" target="_blank" title="Chat with us on WhatsApp">
+    <svg viewBox="0 0 448 512" style="width:30px;height:30px;fill:white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.3-8.6-44.4-27.5-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.8-5.7 5.7-9.4 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+
+</body>
+</html>

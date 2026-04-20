@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post | Siji Malayil Associates</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0d0d0d; --ink2: #1a1a1a; --ink3: #242424;
+      --red: #c0392b; --red2: #e04535; --red-pale: #fdf2f1;
+      --gold: #b5851a; --gold2: #d4a020; --white: #ffffff;
+      --off: #f9f8f6; --off2: #f3f1ed; --text: #1a1a1a;
+      --muted: #666; --border: #e4e1da;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --r: 4px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+    body { font-family: var(--sans); color: var(--text); background: var(--white); overflow-x: hidden; padding-top: 68px; }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 0 5vw; }
+    .tag { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; color: var(--red); display: inline-block; margin-bottom: 1rem; }
+    
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(13, 13, 13, 0.98); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.07); transition: background 0.3s ease, box-shadow 0.3s ease; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    header .wrap { max-width: 100% !important; padding: 0 1.5rem !important; }
+    .logo { text-decoration: none; }
+    .logo-name { font-family: var(--serif); font-size: 1.1rem; color: var(--white); }
+    .nav-links { display: flex; list-style: none; gap: 0.2rem; }
+    .nav-links a { padding: 0.35rem 0.65rem; font-size: 0.78rem; color: rgba(255, 255, 255, 0.55); text-decoration: none; }
+    .nav-links a:hover { color: var(--white); }
+
+    .post-hero { padding: 5rem 0 3rem; text-align: left; }
+    .post-header-title { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--ink); line-height: 1.1; margin-bottom: 1.5rem; }
+    .post-meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 3rem; display: flex; gap: 1.5rem; }
+    .post-meta b { color: var(--ink); }
+    .featured-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+    
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: var(--ink2); font-weight: 300; }
+    .article-content h2, .article-content h3 { font-family: var(--serif); margin: 2.5rem 0 1rem; color: var(--ink); font-weight: 400; }
+    .article-content p { margin-bottom: 1.5rem; }
+    .article-content blockquote { border-left: 3px solid var(--red); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: var(--muted); }
+    .article-content strong { font-weight: 600; color: var(--ink); }
+    
+    .back-btn { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--red); margin-bottom: 2rem; transition: transform 0.2s; }
+    .back-btn:hover { transform: translateX(-5px); }
+
+    .loading-post { text-align: center; padding: 10rem 0; font-family: var(--serif); color: var(--muted); font-size: 1.2rem; }
+  </style>
+</head>
+
+<body>
+  <header id="hdr">
+    <div class="wrap" style="max-width:100% !important;">
+      <nav class="nav-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-name">Siji Malayil Associates</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="post-container">
+    <div class="loading-post">Fetching the article...</div>
+  </div>
+
+  <script>
+    const repo = 'premspaw/sijimalayil_criminal';
+    const folder = 'content/blog';
+
+    async function loadPost() {
+      const container = document.getElementById('post-container');
+      const params = new URLSearchParams(window.location.search);
+      const postId = params.get('id');
+
+      if (!postId) {
+        container.innerHTML = '<div class="loading-post">Post not found. <a href="blog.html">Go back to blog</a></div>';
+        return;
+      }
+
+      try {
+        const response = await fetch(`https://raw.githubusercontent.com/${repo}/main/${folder}/${postId}`);
+        const post = await response.json();
+
+        const date = new Date(post.date).toLocaleDateString('en-IN', {
+          day: 'numeric', month: 'long', year: 'numeric'
+        });
+
+        container.innerHTML = `
+          <div class="wrap">
+            <div class="post-hero">
+              <a href="blog.html" class="back-btn">← Back to Insights</a>
+              <span class="tag">Legal Insight</span>
+              <h1 class="post-header-title">${post.title}</h1>
+              <div class="post-meta">
+                <span>Published on <b>${date}</b></span>
+                <span>By <b>Siji Malayil Associates</b></span>
+              </div>
+              ${post.image ? `<img src="${post.image}" class="featured-img" alt="${post.title}">` : ''}
+              <div class="article-content">
+                ${marked.parse(post.body)}
+              </div>
+            </div>
+          </div>
+        `;
+        document.title = `${post.title} | Siji Malayil Associates`;
+      } catch (err) {
+        container.innerHTML = '<div class="loading-post">Error loading post. <a href="blog.html">Return to Blog</a></div>';
+      }
+    }
+
+    loadPost();
+  </script>
+</body>
+</html>
